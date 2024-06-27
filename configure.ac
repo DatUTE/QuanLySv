@@ -1,6 +1,7 @@
 AC_INIT([qlsv], [0.1])
 
-AM_INIT_AUTOMAKE([foreign])
+AC_PROG_CC
+AM_INIT_AUTOMAKE([subdir-objects])
 AM_SILENT_RULES([yes])
 AC_MSG_NOTICE([.............checking...............])
 CXXFLAGS="$CXXFLAGS -Wunused-result"

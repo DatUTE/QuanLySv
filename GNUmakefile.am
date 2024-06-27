@@ -1,9 +1,8 @@
-bin_PROGRAMS = main
+bin_PROGRAMS = Qlsv
 
 Qlsv_SOURCES = main.cpp
 
 Qlsv_SOURCES += src/Person.cpp \
-                src/Source.cpp \
                 src/Student.cpp
 AM_CPPFLAGS = \
             -I inc \

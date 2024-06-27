@@ -5,7 +5,7 @@
 #include<string>
 #include "Person.h"
 #include "Student.h"
-#define cls system("cls")
+#define cls system("clear")
 using namespace std;
 
 vector<Student*> list_student;
@@ -247,7 +247,7 @@ void XuatThongTin()
 		cout << setw(10) << list_student[i]->getName() << setw(10) << list_student[i]->getMSSV() << setw(10) << list_student[i]->getAge()
 			<< setw(10) << list_student[i]->getAdd() << setw(10) << list_student[i]->getPhone() << endl;
 	}
-	system("pause");
+	system("read -p 'Press Enter to continue...' var");
 	Menu();
 }
 void TimKiemSinhVien()
@@ -265,7 +265,7 @@ void TimKiemSinhVien()
 		}
 	}
 	cout << endl;
-	system("pause");
+	system("read -p 'Press Enter to continue...' var");
 	Menu();
 }
 void XoaThongTin()
@@ -279,12 +279,14 @@ void XoaThongTin()
 			list_student.erase(list_student.begin() + check);
 		}
 	}
-	system("pause");
+	SaveData();
+	system("read -p 'Press Enter to continue...' var");
 	Menu();
 }
+
 void SaveData()
 {
-	fstream file1("Data.txt");
+	fstream file1("data/Data.txt");
 	try
 	{
 		if (file1.is_open())
@@ -295,19 +297,20 @@ void SaveData()
 					<< list_student[i]->getAdd() << ";" << list_student[i]->getPhone() << endl;
 			}
 		}
-		throw exception();
+		file1.close();
 	}
 	catch (const exception& a)
 	{
 		cerr << "khong mo duoc file Data.txt" << endl;
 	}
-	file1.close();
+
 }
+
 void LoadData()
 {
 	string s;
 	string arr[100];
-	fstream file2("Data.txt");
+	fstream file2("data/Data.txt");
 	try
 	{
 		if (file2.is_open())
@@ -331,22 +334,19 @@ void LoadData()
 
 			}
 		}
-		else {
-			throw exception();
-		}
+		file2.close();
 	}
 	catch (const exception&)
 	{
 		cerr << "Khong mo dc file Data.txt" << endl;
 	}
-	file2.close();
 }
 //--------------------------------------------------------------------
 int main()
 {
 	LoadData();
 	SignIn();
-	system("pause");
+	system("read -p 'Press Enter to continue...' var");
 	cls;
 	int selection=0;
 	selection = Menu();
