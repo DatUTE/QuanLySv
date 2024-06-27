@@ -1,7 +1,0 @@
-﻿  main.cpp
-E:\code\QuanLySinhVien\QuanLySinhVien\main.cpp(72,20): warning C4018: '<': signed/unsigned mismatch
-E:\code\QuanLySinhVien\QuanLySinhVien\main.cpp(100,20): warning C4018: '<': signed/unsigned mismatch
-E:\code\QuanLySinhVien\QuanLySinhVien\main.cpp(245,20): warning C4018: '<': signed/unsigned mismatch
-E:\code\QuanLySinhVien\QuanLySinhVien\main.cpp(292,22): warning C4018: '<': signed/unsigned mismatch
-E:\code\QuanLySinhVien\QuanLySinhVien\main.cpp(300,26): warning C4101: 'a': unreferenced local variable
-  QuanLySinhVien.vcxproj -> E:\code\QuanLySinhVien\Debug\QuanLySinhVien.exe

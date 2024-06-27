@@ -1,0 +1,11 @@
+bin_PROGRAMS = main
+
+Qlsv_SOURCES = main.cpp
+
+Qlsv_SOURCES += src/Person.cpp \
+                src/Source.cpp \
+                src/Student.cpp
+AM_CPPFLAGS = \
+            -I inc \
+            -std=c++17
+
