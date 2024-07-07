@@ -3,7 +3,8 @@ bin_PROGRAMS = Qlsv
 Qlsv_SOURCES = main.cpp
 
 Qlsv_SOURCES += src/Person.cpp \
-                src/Student.cpp
+                src/Student.cpp \
+                src/Utils.cpp
 AM_CPPFLAGS = \
             -I inc \
             -std=c++17
